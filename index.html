@@ -4,18 +4,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <h2>Vowels Visualization</h2>
+<body class="">
 
-    <div class="flex flex-row h-screen w-screen justify-center items-center">
+    <div class="text-blue-800 bg-slate-200 text-3xl pl-4 py-4 mb-8">Vowel Visualization</div>
 
-        <div class="mx-5 w-[40vw] h-[40vw]" id="vowel-chart">
-            <svg id="dataviz_area" height=1000 width=1000></svg>
+    <div class="mx-72 my-10">
+
+        <div class="text-2xl my-8">
+            <div class="">
+                The International Phonetic Alphabet is an alphabetic system of phonetic notation based primarily on the Latin alphabet. 
+            </div>
+            <div>
+                It was devised by the International Phonetic Association as a standardized representation of the sounds of spoken language.
+            </div>
         </div>
 
-        <div  class="flex flex-col text-center mx-5 w-[40vw] h-[40vw] border-2 border-black">
-            <div class="" id="vowel-cursor-x"> hello</div>
-            <div class="" id="vowel-cursor-y"> hello</div>
+        <div class="flex flex-col h-2xl-screen w-2xl-screen justify-center items-center my-5 bg-slate-50 border-2 border-gray-300">
+
+            <div class="flex justify-center items-center">
+                <div class="flex flex-row p-12 w-[30vw] h-[30vw] bg-slate-50" id="vowel-chart">
+                    <svg id="vowel-chart-svg" height=700 width=700></svg>
+                </div>
+
+                <div  class="flex flex-row text-center mx-28 w-[25vw] h-[25vw] border-2 border-gray-300">
+                    <div class="w-full">
+                        x coordinate <div id="vowel-cursor-x"> 0</div>
+                    </div>
+                    <div class="w-full">
+                        y coordinate  <div id="vowel-cursor-y"> 0</div>
+                    </div>
+
+                    <div class="w-full"></div>
+                        <svg id="sound-intesity-chart" height=750 width=750></svg>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -27,5 +49,6 @@
   crossorigin="anonymous">
 </script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="./main.js"></script>
+<script src="./vowel-chart.js"></script>
+<script src="./sound-intensity-chart.js"></script>
 </html>
